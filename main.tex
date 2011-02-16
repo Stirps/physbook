@@ -1,0 +1,53 @@
+\documentclass[twoside, 15dd, a5paper]{book}
+%packages used 
+\usepackage{fancyhdr}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{mathtext}
+\usepackage{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[pdftex, dvips]{graphicx}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+%authors, title, et cetera
+\title{Занимательные задачи по физике}
+\author{Д. А. Град, Д. О. Поздняков}
+\date{}
+%stylesheet
+\frenchspacing
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newtheorem{problem}{Задача}[section]
+%%headers & footers
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+%%%even pages
+\fancyhead[CE]{\leftmark} %chapter title
+%%%odd pages
+\fancyhead[CO]{\leftmark}%chapter title
+%%%common for odd and even pages
+\fancyhead[LE,RO]{\thepage}
+%The article
+\begin{document}
+%title page
+\input{./title.tex}
+\clearpage
+%empty page
+\thispagestyle{empty}
+\mbox{}
+\clearpage
+%table of contents
+\tableofcontents
+%empty page
+\thispagestyle{empty}
+\mbox{}
+\clearpage
+%book contents
+%chapter one
+\input{./ch1.tex}
+\clearpage
+%chapter two
+\input{./ch2.tex}
+\clearpage
+\end{document}
