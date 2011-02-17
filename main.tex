@@ -19,8 +19,8 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 %\newtheorem{problem}{Задача}[section]
 % окружение "Задача"
- \newcounter{problem}[section]
- \renewcommand{\theproblem}{{\bf\thesection.\arabic{problem}}}
+ \newcounter{problem}[chapter]
+ \renewcommand{\theproblem}{{\bf\thechapter.\arabic{problem}}}
  \newenvironment{problem}[0]{%
  \refstepcounter{problem}%
  \theproblem\,}%
@@ -48,6 +48,8 @@
 \tableofcontents
 %empty page
 \thispagestyle{empty}
+\clearpage
+\thispagestyle{empty}
 \mbox{}
 \clearpage
 %book contents
@@ -57,5 +59,8 @@
 \clearpage
 %chapter two
 \input{./ch2.tex}
+\clearpage
+%chapter three
+\input{./ch3.tex}
 \clearpage
 \end{document}
