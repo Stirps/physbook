@@ -15,9 +15,16 @@
 \author{Д. А. Град, Д. О. Поздняков}
 \date{}
 %stylesheet
-\frenchspacing
+%\frenchspacing
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\newtheorem{problem}{Задача}[section]
+%\newtheorem{problem}{Задача}[section]
+% окружение "Задача"
+ \newcounter{problem}[section]
+ \renewcommand{\theproblem}{{\bf\thesection.\arabic{problem}}}
+ \newenvironment{problem}[0]{%
+ \refstepcounter{problem}%
+ \theproblem\,}%
+ {\\\mbox{}\\}%
 %%headers & footers
 \pagestyle{fancy}
 \fancyhead{}
@@ -45,6 +52,7 @@
 \clearpage
 %book contents
 %chapter one
+\setcounter{page}{1}
 \input{./ch1.tex}
 \clearpage
 %chapter two
