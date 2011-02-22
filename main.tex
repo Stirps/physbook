@@ -18,13 +18,14 @@
 %\frenchspacing
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 %\newtheorem{problem}{Задача}[section]
+\parindent=0mm
 % окружение "Задача"
  \newcounter{problem}[chapter]
  \renewcommand{\theproblem}{{\bf\thechapter.\arabic{problem}}}
  \newenvironment{problem}[0]{%
  \refstepcounter{problem}%
  \theproblem\,}%
- {\\\mbox{}\\}%
+ {\mbox{}\\}%
 %%headers & footers
 \pagestyle{fancy}
 \fancyhead{}
